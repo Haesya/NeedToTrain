@@ -1,0 +1,356 @@
+/* какие-то общие штуки */
+
+.secondLine, .forthLine{
+    background-color: #F2F2F2;
+}
+
+.h2{
+    color: #554F80;
+}
+
+@media (max-width: 768px) {
+    .checkMedia{
+        display: block;
+    }
+}
+
+/* рубрика экспериментоу */
+/* header */
+
+.ulFirst{
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    display: grid; gap: 12px;
+}
+
+#menu{
+    display: none;
+}
+
+.lbl1{
+    background-color: #404040;
+    color: white;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 12px;
+    margin: auto 0 auto auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+label .fa-times {
+    text-align: center;
+    display: none;
+}
+
+.navbar{
+    position: absolute;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    z-index: 900;
+    opacity: 0;
+    padding: 28px 40px 40px 40px;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+}
+
+#menu:checked ~ .navbar{
+    opacity: 1;
+    transform: scale(1);
+}
+
+#menu:checked ~ label .fa-bars{
+    display: none;
+}
+
+#menu:checked ~ label .fa-times{
+    display: block;
+}
+
+.menuWords{
+    display: block;
+    padding: 8px;
+    margin: auto;
+    width: 100%;
+    color: #404040;
+    text-align: center;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+}
+
+/* конец header*/
+
+/* первая линия, мотивационные букавы и стильные картиночки*/
+
+.firstLine {
+    display: flex;
+}
+
+.classForGaps{
+    display: grid;
+    gap: 24px;
+}
+
+.scrolls{
+    display: flex;
+    gap: 20px;
+    border: 2px solid #CBC2F2;
+    border-radius: 40px;
+    padding: 40px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.ToForm{
+    background-color: #F23051;
+    border-radius: 12px;
+    padding: 12px;
+    border-width: 0;
+}
+
+.ToNextBlock{
+    background-color: #404040;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 12px;
+    border-width: 0;
+}
+
+/* ТУТ ЕЩЕ ДОЛЖЕН БЫТЬ СВИТЧ, НО ОН НЕ РАБОТАЕТ */
+
+.pictures {
+    position: relative;
+    padding: 0;
+}
+
+.blockBehind{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 48%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(to right, #897ACC, #CC29A3, #F23051);
+    border-radius: 40px;
+    z-index: 100;
+}
+
+.blockFront{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+}
+
+.firstPicture{
+    position: absolute;
+    width: 48%;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+}
+
+.secondPicture{
+    position: absolute;
+    width: 48%;
+    left: 0;
+    bottom: 0;
+    border-radius: 40px;
+}
+
+/* конец первой линии */
+
+/* начало второй линии */
+
+#slider{
+    overflow: hidden;
+}
+
+.arrow{
+    display: inline-block;
+    border-radius: 12px;
+    padding: 12px;
+    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.thumbelina {
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    position:absolute;
+    white-space:nowrap;
+}
+
+.ulli li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.lili{
+    display: inline-block;
+}
+
+.blockInsideSlider {
+    width: 340px;
+    height: 280px;
+    border: 2px solid #CBC2F2;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.textTop{
+    width: 100%;
+    padding: 35px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #897ACC, #CC29A3, #F23051);
+}
+
+.Line{
+    width: 260px;
+    height: 2px;
+    border: 2px solid #F2F2F2;
+    margin: auto;
+}
+
+.textBottom{
+    width: 100%;
+    padding: 35px;
+    line-height: 24px;
+    color: #665C99;
+    white-space: pre-wrap;
+}
+
+/* конец второй линии */
+
+/* начало третьей линии */
+
+.FAQ {
+    padding: 40px 0 40px 0;
+}
+
+summary::-webkit-details-marker{display:none;}
+summary::-moz-list-bullet{list-style-type:none;}
+summary::marker{display:none;}
+summary {
+    display:inline-block;
+    width: 100%;
+    padding: .3em 1.5em .3em .6em;
+    font-size:1.4em;
+    position: relative;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+summary:before {
+    right: .3em;
+    top: .4em;
+    color: #F2F2F2;
+    background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=") no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    content: "";
+    position: absolute;
+    transition: transform .5s;
+}
+details[open] > summary:before {
+    transform: rotateZ(90deg);
+}
+summary ~ * {
+    padding:0 1em 0 1em;
+}
+details[open] summary ~ *{
+    animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+}
+summary:focus {
+    outline:0;
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.3);
+}
+details{
+    display:block;
+    margin-bottom: .5rem;
+}
+
+/* конец третьей линии */
+
+/* начало четвертой линии */
+
+.forms{
+    display: flex;
+    gap: 20px;
+    border-radius: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.form{
+    display: grid;
+    gap: 24px;
+    border: 2px solid #CBC2F2;
+    border-radius: 40px;
+    padding: 40px;
+    background-color: white;
+}
+
+.forPadding {
+    padding: 7px 4px 7px 12px;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.inputPicture{
+    font-family: 'Inter', sans-serif;
+    background-color: transparent;
+    border: 0;
+}
+
+/* конец четвертой линии */
+
+/* начало footer */
+
+.footer{
+    height: 120px;
+    background-color: black;
+}
+
+.flag{
+    display: flex;
+    gap:12px;
+    position: relative;
+    margin: auto auto auto 0;
+}
+
+.youCan{
+    display: flex;
+    color: white;
+    position: relative;
+    margin: auto 0 auto auto;
+    width: fit-content;
+}
+
+/* конец footer */
+
+
+
